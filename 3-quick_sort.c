@@ -26,7 +26,7 @@ int partition(int *array, int start, int end, size_t size)
 	int pivot;
 	int pi, i;
 
-	pi = start-1;
+	pi = start;
 	pivot = array[end];
 	for (i = start; i < end; i++)
 	{
@@ -39,7 +39,7 @@ int partition(int *array, int start, int end, size_t size)
 	}
 
 	/* put pivot on the right place */
-	if (array[end] < array[pi])
+	if (array[pi] > pivot)
 	{
 		swap(&array[pi], &array[end]);
 		print_array(array, size);
